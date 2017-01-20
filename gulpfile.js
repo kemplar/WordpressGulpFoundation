@@ -7,14 +7,28 @@ var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
-var livereload = require('gulp-livereload');
+var bs = require('browser-sync').create();
 
+gulp.task('browser-sync', ['sass'], function() {
+    bs.init({
+    proxy: {
+        target: "localhost",
+        ws: true
+    }
+    });
+});
  
 gulp.task('sass', function () {
     gulp.src('./jointswp-child/*.scss')
     .pipe(plumber(plumberErrorHandler))
         .pipe(sass())
-        .pipe(gulp.dest('./jointswp-child'));
+        .pipe(gulp.dest('./jointswp-child'))
+        .pipe(bs.reload({stream:true}));
+});
+
+/* Reload task */
+gulp.task('bs-reload', function () {
+    browserSync.reload();
 });
 
 gulp.task('js', function () {
@@ -40,11 +54,12 @@ var plumberErrorHandler = { errorHandler: notify.onError({
   })
 };
 
-gulp.task('default', ['sass', 'js', 'img', 'watch']);
+gulp.task('default', ['sass', 'browser-sync', 'js', 'img', 'watch']);
 
-gulp.task('watch', function () {
-livereload.listen();
+gulp.task('watch', ['browser-sync'], function () {
+gulp.watch('jointswp-child/*.css', ['sass']);
 gulp.watch('jointswp-child/*.scss', ['sass']);
+gulp.watch("jointswp-child/*.html").on('change', bs.reload);
 gulp.watch('jointswp-child/js/src/*.js', ['js']);
 gulp.watch('jointswp-child/img/src/*.{png,jpg,gif}', ['img']);
 });
