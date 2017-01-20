@@ -1,5 +1,5 @@
 # WordpressGulpFoundation
-A blank Wordpress theme with Gulp and Foundation
+A blank Wordpress start theme with Gulp and Foundation
 
 <p>First things to do before utilizing this theme:</p>
 <p>Install Local Web Server, Wordpress, and Node.js</p>
