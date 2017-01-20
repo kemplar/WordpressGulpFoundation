@@ -1,23 +1,23 @@
 # WordpressGulpFoundation
 A blank Wordpress theme with Gulp and Foundation
 
-First things to do before utilizing this theme:
-Install Local Web Server, Wordpress, and Node.js
-http://www.wampserver.com/en/
-https://codex.wordpress.org/Installing_WordPress
-https://nodejs.org/en/
+<p>First things to do before utilizing this theme:</p>
+<p>Install Local Web Server, Wordpress, and Node.js</p>
+<p>http://www.wampserver.com/en/</p>
+<p>https://codex.wordpress.org/Installing_WordPress</p>
+<p>https://nodejs.org/en/</p>
 
-Install Gulp Globally:
-npm install -g gulp
+<p>Install Gulp Globally:</p>
+<p>npm install -g gulp</p>
 
-Use a terminal and navigate to your themes folder and install gulp locally:
-cd wamp/www/wp-content/themes
+<p>Use a terminal and navigate to your themes folder and install gulp locally:</p>
+<p>cd wamp/www/wp-content/themes</p>
 
-Install all the gulp packages the gulpfile.js uses:
-npm install gulp --save-dev
-npm install gulp-sass --save-dev
-npm install gulp-concat --save-dev
-npm install gulp-imagemin --sav-dev
-npm install gulp-plumber --save-dev
-npm install gulp-notify --save-dev
-npm install gulp-liveraload --save-dev
+<p>Install all the gulp packages the gulpfile.js uses:</p>
+<p>npm install gulp --save-dev</p>
+<p>npm install gulp-sass --save-dev</p>
+<p>npm install gulp-concat --save-dev</p>
+<p>npm install gulp-imagemin --sav-dev</p>
+<p>npm install gulp-plumber --save-dev</p>
+<p>npm install gulp-notify --save-dev</p>
+<p>npm install gulp-liveraload --save-dev</p>
