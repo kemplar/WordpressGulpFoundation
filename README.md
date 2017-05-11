@@ -20,7 +20,7 @@ A blank Wordpress start theme with Gulp and Foundation
 <p>npm install gulp-imagemin --sav-dev</p>
 <p>npm install gulp-plumber --save-dev</p>
 <p>npm install gulp-notify --save-dev</p>
-<p>npm install gulp-browser-sync --save-dev</p>
+<p>npm install browser-sync gulp --save-dev</p>
 
 <p>Run the "gulp watch" command in terminal</p>
 <p>Edit the style.scss file and will autocompile to css + reload browser on save<p>
